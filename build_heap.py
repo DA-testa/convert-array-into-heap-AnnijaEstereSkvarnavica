@@ -15,6 +15,7 @@ def build_heap(data):
                 child = child + 1
             if data[child] < data[j]:
                 data[j], data[child] = data[child],data[j]
+                swaps.append((j, child))
                 j = child
             else:
                 break
@@ -49,7 +50,7 @@ def main():
     
     assert len(swaps) <= 4 * n
 
-    print(len(swaps))
+    ##print(len(swaps))
 
 
     # output all swaps
