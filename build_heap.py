@@ -5,6 +5,22 @@ def build_heap(data):
     swaps = []
     # TODO: Creat heap and heap sort
     # try to achieve  O(n) and not O(n2)
+    n = len(data)
+
+    for i in range(n//2-1, 1, -1): #largest integear
+        j = i #current node
+        while j * 2 + 1 < n: # looking for smallest child
+            child = j * 2 + 1
+            if child + 1 < n and data[child+1]< data[child]:
+                child = child + 1
+            if data[child] < data[j]:
+                data[j], data[child] = data[child],data[j]
+                 j = child
+            else:
+                break
+                
+
+
 
 
     return swaps
