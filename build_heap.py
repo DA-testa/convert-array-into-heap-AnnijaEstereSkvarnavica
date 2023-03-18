@@ -5,7 +5,7 @@ def build_heap(data):
     swaps = []
     # TODO: Creat heap and heap sort
     # try to achieve  O(n) and not O(n2)
-    n = len(data)
+    n= len(data)
 
     for i in range(n//2-1, 1, -1): #largest integear
         j = i #current node
@@ -15,7 +15,7 @@ def build_heap(data):
                 child = child + 1
             if data[child] < data[j]:
                 data[j], data[child] = data[child],data[j]
-                 j = child
+                 j=child
             else:
                 break
 
@@ -48,7 +48,7 @@ def main():
     # this number should be less than 4n (less than 4*len(data))
     
     assert len(swaps) <= 4 * n
-    
+
     print(len(swaps))
 
 
