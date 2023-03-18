@@ -33,7 +33,7 @@ def main():
     # add another input for I or F 
     # first two tests are from keyboard, third test is from a file
 
-input_type = input()
+    input_type = input()
     if 'I' in input_type:  
         n = int(input()) 
         data = list(map(int, input().split()))
