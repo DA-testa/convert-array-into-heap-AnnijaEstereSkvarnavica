@@ -15,7 +15,7 @@ def build_heap(data):
                 child = child + 1
             if data[child] < data[j]:
                 data[j], data[child] = data[child],data[j]
-                 j=child
+                j = child
             else:
                 break
 
