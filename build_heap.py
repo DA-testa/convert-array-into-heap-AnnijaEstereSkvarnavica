@@ -33,10 +33,27 @@ def main():
     # add another input for I or F 
     # first two tests are from keyboard, third test is from a file
 
-
-    # input from keyboard
-    n = int(input())
-    data = list(map(int, input().split()))
+input_type = input()
+    if 'I' in input_type:  
+        n = int(input()) 
+        data = list(map(int, input().split()))
+    elif 'F' in input_type:
+        fileName = input().strip()
+        path ="./test/" + fileName
+        if 'a' in fileName:
+            print("error")
+            return
+        try:
+            with open(path,'r', encoding='utf-8') as f:
+                n = int(f.readline())
+                data = list(map(int, f.readline().split()))
+        except FileNotFoundError:
+            print("error")
+            return
+        
+    else:
+        print("error")                                         
+        return
 
     # checks if lenght of data is the same as the said lenght
     assert len(data) == n
