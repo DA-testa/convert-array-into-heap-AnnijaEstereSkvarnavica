@@ -38,7 +38,7 @@ def main():
         n = int(input()) 
         data = list(map(int, input().split()))
     elif 'F' in input_type:
-        fileName = input().strip()
+        fileName = input()
         path ="./test/" + fileName
         try:
             with open(path,'r', encoding='utf-8') as f:
