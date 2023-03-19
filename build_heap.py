@@ -40,9 +40,6 @@ def main():
     elif 'F' in input_type:
         fileName = input().strip()
         path ="./test/" + fileName
-        if 'a' in fileName:
-            print("error")
-            return
         try:
             with open(path,'r', encoding='utf-8') as f:
                 n = int(f.readline())
