@@ -37,16 +37,18 @@ def main():
     if 'I' in input_type:  
         n = int(input()) 
         data = list(map(int, input().split()))
-    else:
+    elif 'F'in input_type:
         fileName = input()
+        file = open("./tests/"+fileName,mode="r")
+        n =  int(file.readline().strip())
+        data = list(map(int, file.readline().strip().split()))
         
-        try:
-            with open(fileName) as f:
-                n = int(f.readline())
-                data = list(map(int, f.readline().split()))
-        except FileNotFoundError:
-            print("error")
-            return
+        
+       
+    else:
+        
+        print("error")
+       
         
    
 
