@@ -37,7 +37,7 @@ def main():
     if 'I' in input_type:  
         n = int(input()) 
         data = list(map(int, input().split()))
-    elif 'F' in input_type:
+    else:
         fileName = input()
         
         try:
@@ -48,9 +48,7 @@ def main():
             print("error")
             return
         
-    else:
-        print("error")                                         
-        return
+   
 
     # checks if lenght of data is the same as the said lenght
     assert len(data) == n
