@@ -39,9 +39,9 @@ def main():
         data = list(map(int, input().split()))
     elif 'F' in input_type:
         fileName = input()
-        path ="./test/" + fileName
+        
         try:
-            with open(path,'r', encoding='utf-8') as f:
+            with open(fileName) as f:
                 n = int(f.readline())
                 data = list(map(int, f.readline().split()))
         except FileNotFoundError:
